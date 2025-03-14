@@ -1,3 +1,6 @@
+import { createNoteList } from "./noteList";
+import { myNotes } from "./data";
+
 export function newNote(name,desciption){
     class noteClass{
         constructor(name,description){
@@ -6,5 +9,6 @@ export function newNote(name,desciption){
         }
     }
     const note = noteClass(name,desciption);
-    myNotes.push(note)
+    myNotes.push(note);
+    createNoteList();
 }

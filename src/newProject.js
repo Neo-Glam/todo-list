@@ -1,3 +1,6 @@
+import { myProjects } from "./data";
+import { createProjectList } from "./projectList";
+
 export function newProject(name,desciption,date,importance){
     class projectClass{
         constructor(name,description,date,importance){
@@ -7,7 +10,9 @@ export function newProject(name,desciption,date,importance){
             this.importance = importance;
             this.completion = false;
         }
+        todos = [];
     }
-    const project = projectClass(name,desciption,date,importance);
+    const project = new projectClass(name,desciption,date,importance);
     myProjects.push(project)
+    createProjectList();
 }
