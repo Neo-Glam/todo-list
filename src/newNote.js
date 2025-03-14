@@ -1,4 +1,5 @@
 import { createNoteList } from "./noteList";
+import { createNoteCard } from "./noteCards";
 import { myNotes } from "./data";
 
 export function newNote(name,desciption){
@@ -8,7 +9,8 @@ export function newNote(name,desciption){
             this.description = description;
         }
     }
-    const note = noteClass(name,desciption);
+    const note =  new noteClass(name,desciption);
     myNotes.push(note);
     createNoteList();
+    createNoteCard();
 }

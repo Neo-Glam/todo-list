@@ -8,7 +8,7 @@ export function createNoteList(){
     myNotes.forEach(note=>{
 
         const title = document.createElement("li");
-        title.innerText = note.name;
-        projectList.appendChild(title);
+        title.innerHTML = note.name;
+        noteList.appendChild(title);
     }
 )}

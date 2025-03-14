@@ -1,5 +1,6 @@
 import { myProjects } from "./data";
 import { createProjectList } from "./projectList";
+import { createProjectCard } from "./projectCards";
 
 export function newProject(name,desciption,date,importance){
     class projectClass{
@@ -15,4 +16,5 @@ export function newProject(name,desciption,date,importance){
     const project = new projectClass(name,desciption,date,importance);
     myProjects.push(project)
     createProjectList();
+    createProjectCard();
 }
