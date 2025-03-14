@@ -1,0 +1,105 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1.5fr 9fr;
+    grid-template-rows: 1fr 15fr;
+    --primColor : #219EBC;
+    --secondColor : #023047;
+    --terColor : #8ECAE6;
+}
+
+#header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    background-color: var(--primColor);
+}
+
+#newProject{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--secondColor);
+    color: white;
+    width: 150px;
+}
+
+
+
+#sidebar{
+    min-width: 250px;
+    background-color: var(--secondColor);
+    color:  white;
+    display: grid;
+    padding: 10px;
+    padding-bottom: 100%;
+    grid-template-rows: 1fr 1fr;
+}
+
+#content{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+}
