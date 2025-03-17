@@ -3,7 +3,11 @@ import { myNotes } from "./data";
 export function createNoteCard(){
 
     const content = document.querySelector("#content");
+    const infoPanel = document.querySelector("#infoPanel");
+
     content.innerHTML = "";
+    infoPanel.innerHTML = "";
+
 
     myNotes.forEach(project=>{
 

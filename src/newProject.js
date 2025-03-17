@@ -12,9 +12,22 @@ export function newProject(name,desciption,date,importance){
             this.completion = false;
         }
         todos = [];
+
+        newTodo(description){
+            class todoClass{
+                constructor(description){
+                    this.description = description;
+                    this.completion = false
+                }
+            }
+
+            const todo = new todoClass(description);
+            this.todos.push(todo);
+        }
     }
     const project = new projectClass(name,desciption,date,importance);
     myProjects.push(project)
+    console.log(myProjects)
     createProjectList();
     createProjectCard();
 }
