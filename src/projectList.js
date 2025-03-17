@@ -1,6 +1,8 @@
-import { myProjects } from "./data";
+import { RetrieveProjectStorage} from "./data";
 
 export function createProjectList(){
+
+    const myProjects = RetrieveProjectStorage();
 
     const projectList = document.querySelector("#projectList")
     projectList.innerHTML = "";

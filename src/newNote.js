@@ -1,6 +1,6 @@
 import { createNoteList } from "./noteList";
 import { createNoteCard } from "./noteCards";
-import { myNotes } from "./data";
+import { RetrieveNoteStorage,updateNoteStorage } from "./data";
 
 export function newNote(name,desciption){
     class noteClass{
@@ -10,7 +10,9 @@ export function newNote(name,desciption){
         }
     }
     const note =  new noteClass(name,desciption);
+    const myNotes = RetrieveNoteStorage();
     myNotes.push(note);
+    updateNoteStorage(myNotes);
     createNoteList();
     createNoteCard();
 }

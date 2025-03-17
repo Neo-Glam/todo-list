@@ -1,7 +1,8 @@
-import { myNotes } from "./data";
+import { RetrieveNoteStorage} from "./data";
 
 export function createNoteList(){
 
+    const myNotes = RetrieveNoteStorage();
     const noteList = document.querySelector("#noteList")
     noteList.innerHTML = "";
 

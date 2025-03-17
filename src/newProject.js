@@ -1,4 +1,4 @@
-import { myProjects } from "./data";
+import { RetrieveProjectStorage,updateProjectStorage } from "./data";
 import { createProjectList } from "./projectList";
 import { createProjectCard } from "./projectCards";
 
@@ -26,8 +26,9 @@ export function newProject(name,desciption,date,importance){
         }
     }
     const project = new projectClass(name,desciption,date,importance);
+    const myProjects = RetrieveProjectStorage();
     myProjects.push(project)
-    console.log(myProjects)
+    updateProjectStorage(myProjects);
     createProjectList();
     createProjectCard();
 }

@@ -22,3 +22,5 @@ export function buttonNav(){
         createElementForm();
     })
 }
+
+buttonNav();
