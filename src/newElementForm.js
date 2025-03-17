@@ -6,7 +6,9 @@ export function createElementForm(){
     const content = document.querySelector("#content");
     const infoPanel = document.querySelector("#infoPanel");
 
-    content.innerHTML = "";
+    const infoContent = document.createElement("div")
+    infoContent.id = "infoContentButton"
+
     infoPanel.innerHTML = "";
 
     const projectButton = document.createElement("button");
@@ -73,7 +75,8 @@ export function createElementForm(){
         newProjectModal.close();
         })
 
-    infoPanel.appendChild(projectButton);
-    infoPanel.appendChild(noteButton);
+    infoContent.appendChild(projectButton);
+    infoContent.appendChild(noteButton);
+    infoPanel.appendChild(infoContent);
 
 }

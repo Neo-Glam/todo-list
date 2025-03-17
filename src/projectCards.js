@@ -52,6 +52,9 @@ export function createProjectCard(){
             content.innerHTML = "";
             infoPanel.innerHTML = "";
 
+            const infoContent = document.createElement("div")
+            infoContent.id = "infoContent"
+
             const title = document.createElement("h3");
             const description = document.createElement("p");
             const date = document.createElement("p");
@@ -67,10 +70,12 @@ export function createProjectCard(){
             date.classList.add("projectDate");
             importance.classList.add("projectImportance");
 
-            infoPanel.appendChild(title);
-            infoPanel.appendChild(description);
-            infoPanel.appendChild(date);
-            infoPanel.appendChild(importance);
+            infoContent.appendChild(title);
+            infoContent.appendChild(description);
+            infoContent.appendChild(date);
+            infoContent.appendChild(importance);
+
+            infoPanel.appendChild(infoContent)
 
 
         })
