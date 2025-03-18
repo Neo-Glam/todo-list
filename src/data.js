@@ -1,5 +1,6 @@
 //export const myProjects = [];
 //export const myNotes = [];
+import { projectClass } from "./newProject";
 
 export function checkStorage(){
     if (!localStorage.getItem("myProjects","myNotes")){
@@ -20,7 +21,14 @@ export function populateStorage(){
 }
 
 export function RetrieveProjectStorage(){
-    return JSON.parse(localStorage.getItem("myProjects")) 
+    const storedProject = JSON.parse(localStorage.getItem("myProjects"));
+    
+    return storedProject.map(project=>{
+        let restoredProject = new projectClass(project.name, project.description, project.date, project.importance);
+        restoredProject.todos = project.todos || [];
+        restoredProject.completion = project.completion;
+        return restoredProject;
+    })
 }
 
 export function RetrieveNoteStorage(){

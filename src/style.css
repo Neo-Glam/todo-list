@@ -176,3 +176,10 @@ button{
   transform: translate(-50%, -50%);
   align-items: center;
 }
+
+form{
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr ;
+  padding: 10px;
+}

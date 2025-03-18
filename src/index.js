@@ -4,6 +4,7 @@ import { checkStorage } from "./data";
 import { createProjectCard } from "./projectCards";
 import { createProjectList } from "./projectList";
 import { createNoteList } from "./noteList";
+import { RetrieveProjectStorage } from "./data";
 
 
 checkStorage();
@@ -13,7 +14,10 @@ createProjectList();
 createNoteList();
 
 
+const test = RetrieveProjectStorage();
 
+
+console.table(test);
 
 
 

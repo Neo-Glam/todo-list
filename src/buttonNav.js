@@ -10,17 +10,21 @@ export function buttonNav(){
     const showNoteButton = document.querySelector("#showNoteButton");
     const newElement = document.querySelector("#newElement");
 
+    const infoPanel = document.querySelector("#infoPanel")
+
     showProjectButton.addEventListener("click",()=>{
         createProjectCard();
+        window.location.reload();
+        infoPanel.innerHTML = "";
     })
 
     showNoteButton.addEventListener("click", ()=>{
         createNoteCard();
+        infoPanel.innerHTML = "";
+
     })
 
     newElement.addEventListener("click",()=>{
         createElementForm();
     })
 }
-
-buttonNav();
