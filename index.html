@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To Do it!</title>
+<script defer src="main.js"></script></head>
+<body>
+<div id="wrapper">
+        <div id="header">
+            <h1><i class="fa-solid fa-list-check"></i> To Do It!</h1>
+            <button id="newElement">New</i></button>
+        </div>
+    
+        <div id="sidebar">
+            <div id="projectSection">
+                <button id="showProjectButton"><i class="fa-solid fa-diagram-project"></i> PROJECTS</button>
+                <ul id="projectList">
+    
+                </ul>
+            </div>
+            <div id="noteSection">
+                <button id="showNoteButton"><i class="fa-solid fa-note-sticky"></i> NOTES</button>
+                <ul id="noteList">
+    
+                </ul>
+            </div>
+        </div>
+    
+        <div id="mainPanel">
+            <div id="infoPanel">
+
+
+            </div>
+            
+            <div id="content">
+            
+            </div>
+        </div>    
+</div>
+
+<dialog data-modal id="newProjectModal">
+    <h2>New Project</h2>
+    <form id="newProjectForm">
+        <div class="formSec">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="project-title" maxlength="50" required>
+        </div>
+        <div class="formSec">
+            <label for="description">Description</label>
+            <textarea type="text" class="formDescription" id="description" name="project-description" maxlength="250" required ></textarea>
+        </div>
+        <div class="formSec">
+            <label for="date">Deadline</label>
+            <input type="date" id="date" name="project-date" required>
+        </div>
+        <div class="formSec">
+            <label for="importance">Importance</label>
+            <select id="importance" name="project-importance">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="Critical">Critical</option>
+            </select>
+        </div>
+        <button type="submit" id="projectSubmitButton">Add Project</button>
+        <button type="button" id="closeProjectModal">Close</button>
+    </form>
+</dialog>
+<dialog data-modal id="newNoteModal">
+    <h2>New Note</h2>
+    <form id="newNotetForm">
+        <div class="formSec">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="note-title" maxlength="50" required>
+        </div>
+        <div class="formSec">
+            <label for="description">Description</label>
+            <textarea type="text" class="formDescription" id="description" name="note-description" maxlength="400" required></textarea>
+        </div>
+        <button type="submit" id="noteSubmitButton">Add Note</button>
+        <button type="button" id="closeNoteModal">Close</button>
+    </form>
+</dialog>
+
+<dialog data-modal id="newTaskModal">
+    <h2>New Task</h2>
+    <form id="newTasktForm">
+        <div class="formSec">
+            <label for="description">Description</label>
+            <textarea type="text" class="formDescription" id="description" name="task-description" maxlength="400" required></textarea>
+        </div>
+        <button type="submit" id="taskSubmitButton">Add Task</button>
+        <button type="button" id="closeTaskModal">Close</button>
+    </form>
+</dialog>
+</body>
+</html>
